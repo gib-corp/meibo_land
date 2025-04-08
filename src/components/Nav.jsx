@@ -1,6 +1,5 @@
-import React from "react";
 
-const Nav = () => {
+const Nav = ({toggleLoginModal}) => {
   return (
     <nav className="flex justify-between py-10 font-medium text-xl tracking-tight">
       <div className="nav-left flex items-center">
@@ -10,7 +9,7 @@ const Nav = () => {
       </div>
       <div className="nav-right flex">
         <div className="register">register</div>
-        <div className="login ml-4">login</div>
+        <div className="login ml-4" onClick={toggleLoginModal}>login</div>
       </div>
     </nav>
   );

@@ -1,7 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import "./App.css";
 import Nav from "./components/Nav";
 import Signature from "./components/Signature";
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
 
@@ -16,12 +18,16 @@ function App() {
     };
   }, []);
 
+  const [modalLogin, setModalLogin] = useState(false)
+  const toggleLoginModal = () => setModalLogin(prev => !prev);
+
   return (
     <>
       <div className="hero min-h-[calc(var(--svh,1svh)*90)] flex flex-col justify-between">
-        <Nav />
+        <Nav toggleLoginModal={toggleLoginModal}/>
         <Signature />
       </div>
+      {modalLogin && <Register toggleLoginModal={toggleLoginModal}/>}
     </>
   );
 }

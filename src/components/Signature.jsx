@@ -1,4 +1,3 @@
-import React from "react";
 import meiboSVG from "../assets/meibo.svg";
 
 function Signature() {
@@ -11,7 +10,7 @@ function Signature() {
             <span className="mx-1">-</span>
             <div className="fr text-gray-600">fr</div>
           </div>
-          <div className="year ml-5">2005</div>
+          <div className="year ml-5">2025</div>
         </div>
         <div className="hero-footer-top-right">
           <div className="catchphrase text-right text-5xl leading-15 tracking-tight">
