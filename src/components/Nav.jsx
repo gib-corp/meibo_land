@@ -1,5 +1,4 @@
-
-const Nav = ({toggleLoginModal}) => {
+const Nav = ({ toggleLoginModal, handleNavButton }) => {
   return (
     <nav className="flex justify-between py-10 font-medium text-xl tracking-tight">
       <div className="nav-left flex items-center">
@@ -8,8 +7,24 @@ const Nav = ({toggleLoginModal}) => {
         <div className="catchphrase">powered by obvious prime</div>
       </div>
       <div className="nav-right flex">
-        <div className="register">register</div>
-        <div className="login ml-4" onClick={toggleLoginModal}>login</div>
+        <div
+          className="register cursor-pointer"
+          onClick={(e) => {
+            toggleLoginModal();
+            handleNavButton("register");
+          }}
+        >
+          register
+        </div>
+        <div
+          className="login cursor-pointer ml-4"
+          onClick={(e) => {
+            toggleLoginModal();
+            handleNavButton("login");
+          }}
+        >
+          login
+        </div>
       </div>
     </nav>
   );
